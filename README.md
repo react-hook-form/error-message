@@ -28,10 +28,31 @@ Check out this <a href="https://codesandbox.io/s/react-hook-form-hookforminput-r
 ## Quickstart
 
 ```jsx
+import React from 'react';
+import useForm from 'react-hook-form';
+import { RHFError } from 'react-hook-form-error';
+
+function App() {
+  const { handleSubmit, register, errors } = useForm();
+
+  return (
+    <form onSubmit={handleSubmit(data => console.log(data))}>
+      <input name="test" ref={register} />
+      <RHFError name="test" errors={errors} />
+      <button>submit</button>
+    </form>
+  );
+}
 ```
 
 ## API
-                                                                                                             |
+
+| Prop       | Type      | Required | Default | Description                                                                                                                                                     |
+| :--------- | :-------- | :------: | :-----: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`     | string    |    ✓     |         | Unique name to register the custom input                                                                                                                        |
+| `errors`   | Object    |    ✓     |         | (optional when using <a href="https://react-hook-form.com/api#errors">errors</a>) React Hook Form <a href="https://react-hook-form.com/api#setValue">errors</a> |
+| `as`       | Component |          |         | Component reference eg: `Select` from `react-select`                                                                                                            |
+| `messages` | Object    |          |         | keys of error type's message                                                                                                                                    |
 
 ## Contributors
 

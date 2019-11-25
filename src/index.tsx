@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { useFormContext } from 'react-hook-form';
 
 type ErrorFields = Record<string, { message?: string; type: string }>;
 
 const RHFError = <Errors extends ErrorFields, Name extends keyof Errors>({
   as,
-  errors,
+  errors: errorsFromProps,
   name,
   messages = {},
 }: {
@@ -13,6 +14,8 @@ const RHFError = <Errors extends ErrorFields, Name extends keyof Errors>({
   name: Name;
   messages?: Record<string, string>;
 }) => {
+  const methods = useFormContext();
+  const errors = errorsFromProps || methods.errors;
   const message = errors[name].message || messages[errors[name].type];
 
   if (!message) {
