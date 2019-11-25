@@ -6,12 +6,12 @@ const RHFError = <Errors extends ErrorFields, Name extends keyof Errors>({
   as,
   errors,
   name,
-  messages,
+  messages = {},
 }: {
-  as: any;
+  as?: React.ReactElement;
   errors: Errors;
   name: Name;
-  messages: Record<string, string>;
+  messages?: Record<string, string>;
 }) => {
   const message = errors[name].message || messages[errors[name].type];
 
@@ -19,7 +19,11 @@ const RHFError = <Errors extends ErrorFields, Name extends keyof Errors>({
     return null;
   }
 
-  return as ? React.cloneElement(as, { children: message }) : message;
+  return as ? (
+    React.cloneElement(as, { children: message })
+  ) : (
+    <span>{message}</span>
+  );
 };
 
 export { RHFError };
