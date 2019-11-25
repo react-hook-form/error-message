@@ -13,6 +13,10 @@ const RHFError = ({
 }) => {
   const message = errors[name]?.message || messages[errors[name].type];
 
+  if (!message) {
+    return null;
+  }
+
   return as ? React.cloneElement(as, { children: message }) : message;
 };
 
