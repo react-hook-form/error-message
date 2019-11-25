@@ -1,0 +1,9 @@
+{
+  "name": "react-hook-form-error",
+  "version": "0.0.1",
+  "description": "React Hook Form error message component",
+  "main": "src/index.js",
+  "repository": "git@github.com:react-hook-form/react-hook-form-error.git",
+  "author": "bluebill1049 <bluebill1049@hotmail.com>",
+  "license": "MIT"
+}
