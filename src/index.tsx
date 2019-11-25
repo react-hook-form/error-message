@@ -1,17 +1,19 @@
 import * as React from 'react';
 
-const RHFError = ({
+type ErrorFields = Record<string, { message?: string; type: string }>;
+
+const RHFError = <Errors extends ErrorFields, Name extends keyof Errors>({
   as,
   errors,
   name,
   messages,
 }: {
   as: any;
-  errors: any;
-  name: string;
-  messages: any;
+  errors: Errors;
+  name: Name;
+  messages: Record<string, string>;
 }) => {
-  const message = errors[name]?.message || messages[errors[name].type];
+  const message = errors[name].message || messages[errors[name].type];
 
   if (!message) {
     return null;
