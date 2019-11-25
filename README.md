@@ -10,10 +10,10 @@
 
 <div align="center">
 
-[![npm downloads](https://img.shields.io/npm/dm/react-hook-form-error.svg?style=flat-square)](https://www.npmjs.com/package/react-hook-form)
-[![npm](https://img.shields.io/npm/dt/react-hook-form-error.svg?style=flat-square)](https://www.npmjs.com/package/react-hook-form)
-[![npm](https://badgen.net/bundlephobia/minzip/react-hook-form-error)](https://badgen.net/bundlephobia/minzip/react-hook-form)
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=React+hooks+for+form+validation+without+the+hassle&url=https://github.com/bluebill1049/react-hook-form)&nbsp;[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/react-hook-form)
+[![npm downloads](https://img.shields.io/npm/dm/react-hook-form-error.svg?style=flat-square)](https://www.npmjs.com/package/react-hook-form-error)
+[![npm](https://img.shields.io/npm/dt/react-hook-form-error.svg?style=flat-square)](https://www.npmjs.com/package/react-hook-form-error)
+[![npm](https://badgen.net/bundlephobia/minzip/react-hook-form-error)](https://badgen.net/bundlephobia/minzip/react-hook-form-error)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=React+hooks+for+form+validation+without+the+hassle&url=https://github.com/bluebill1049/react-hook-form-error)&nbsp;[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/react-hook-form-error)
 
 </div>
 
