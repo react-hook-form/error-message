@@ -21,10 +21,6 @@
 
     $ npm install react-hook-form-error
 
-## Demo
-
-Check out this <a href="https://codesandbox.io/s/react-hook-form-hookforminput-rzu9s">demo</a>.
-
 ## Quickstart
 
 ```jsx
