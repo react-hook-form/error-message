@@ -47,7 +47,7 @@ function App() {
 | :--------- | :-------- | :------: | :-----: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `name`     | string    |    ✓     |         | Unique name to register the custom input                                                                                                                        |
 | `errors`   | Object    |    ✓     |         | (optional when using <a href="https://react-hook-form.com/api#errors">errors</a>) React Hook Form <a href="https://react-hook-form.com/api#setValue">errors</a> |
-| `as`       | Component |          |         | Component reference eg: `Select` from `react-select`                                                                                                            |
+| `as`       | Component |          |         | Component reference eg: `<span />`                                                                                                            |
 | `messages` | Object    |          |         | keys of error type's message                                                                                                                                    |
 
 ## Contributors
