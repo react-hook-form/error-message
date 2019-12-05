@@ -10,7 +10,7 @@ const RHFError = <Errors extends ErrorFields, Name extends keyof Errors>({
   messages = {},
 }: {
   as?: React.ReactElement;
-  errors: Errors;
+  errors?: Errors;
   name: Name;
   messages?: Record<string, string>;
 }) => {
