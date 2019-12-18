@@ -15,9 +15,11 @@ const RHFError = <Errors extends ErrorFields, Name extends keyof Errors>({
   messages?: Record<string, string>;
 }) => {
   const methods = useFormContext();
-  const errors = errorsFromProps || methods.errors;
-  // @ts-ignore
-  const message = errors[name].message || messages[errors[name].type];
+  const errors = errorsFromProps || (methods.errors as Errors);
+  const message =
+    errors &&
+    errors[name] &&
+    (errors[name].message || messages[errors[name].type]);
 
   if (!message) {
     return null;
