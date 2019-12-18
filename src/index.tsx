@@ -3,7 +3,7 @@ import { useFormContext } from 'react-hook-form';
 import { FieldError } from 'react-hook-form/dist/types';
 
 type ErrorFields = Record<string, FieldError>;
-type ErrorMessages<Errors> = Partial<Record<keyof Errors, string>>;
+type ErrorMessages = Record<string, string>;
 
 const RHFError = <Errors extends ErrorFields, Name extends keyof Errors>({
   as,
@@ -14,7 +14,7 @@ const RHFError = <Errors extends ErrorFields, Name extends keyof Errors>({
   as?: React.ReactElement;
   errors?: Errors;
   name: Name;
-  messages?: ErrorMessages<Errors>;
+  messages?: ErrorMessages;
 }) => {
   const methods = useFormContext();
   const errors = errorsFromProps || (methods.errors as Errors);
