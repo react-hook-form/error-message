@@ -1,11 +1,17 @@
 import * as React from 'react';
-import { useFormContext } from 'react-hook-form';
-import { FieldError } from 'react-hook-form/dist/types';
+import {
+  useFormContext,
+  FieldErrors,
+  FieldError,
+  FieldName,
+} from 'react-hook-form';
+import get from './utils/get';
+import { FormValuesFromErrors, ErrorMessages } from './types';
 
-type ErrorFields = Record<string, FieldError>;
-type ErrorMessages = Record<string, string>;
-
-const RHFError = <Errors extends ErrorFields, Name extends keyof Errors>({
+const RHFError = <
+  Errors extends FieldErrors<any>,
+  Name extends FieldName<FormValuesFromErrors<Errors>>
+>({
   as,
   errors: errorsFromProps,
   name,
@@ -18,11 +24,8 @@ const RHFError = <Errors extends ErrorFields, Name extends keyof Errors>({
 }) => {
   const methods = useFormContext();
   const errors = errorsFromProps || (methods.errors as Errors);
-  const message =
-    errors &&
-    errors[name] &&
-    (errors[name].message || messages[errors[name].type]);
-
+  const error = get(errors, name) as FieldError | undefined;
+  const message = error && (error.message || messages[error.type]);
   if (!message) {
     return null;
   }
