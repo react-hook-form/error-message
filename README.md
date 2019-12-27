@@ -1,3 +1,9 @@
+<div align="center"><h1>📣 UPDATE</h1>
+
+This component is now a part of React Hook Form V4, and renamed to <a href="https://react-hook-form.com/api/#ErrorMessage">ErrorMessage</a>.
+
+</div>
+
 <div align="center">
     <p align="center">
         <a href="https://react-hook-form.com" title="React Hook Form - Simple React forms validation">
