@@ -40,13 +40,13 @@
     "prettier": "^1.19.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-hook-form": "^6.0.0-beta.2",
     "react-test-renderer": "^16.9.0",
     "rollup": "^1.20.3",
     "rollup-plugin-terser": "^5.1.1",
     "rollup-plugin-typescript2": "^0.25.2",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.7.2",
-    "react-hook-form": "^3.28.0"
+    "typescript": "^3.7.2"
   },
   "peerDependencies": {
     "react": "^16.8.0",
