@@ -31,9 +31,9 @@ $ npm install @hookform/error-message
 [![Edit React Hook Form - ErrorMessage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/error-messagemessage-pc2b6?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { ErrorMessage } from 'hookform@error-message';
+import React from "react";
+import { useForm } from "react-hook-form";
+import { ErrorMessage } from "hookform@error-message";
 
 export default function App() {
   const { register, errors, handleSubmit } = useForm();
@@ -43,7 +43,7 @@ export default function App() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <input
         name="singleErrorInput"
-        ref={register({ required: 'This is required.' })}
+        ref={register({ required: "This is required." })}
       />
       <ErrorMessage errors={errors} name="singleErrorInput" />
 
@@ -65,13 +65,13 @@ export default function App() {
 [![Edit React Hook Form - ErrorMessage: multiple error messages](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/error-messagemessage-multiple-error-messages-cis2m?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { ErrorMessage } from '@hookform/error-messagee';
+import React from "react";
+import { useForm } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-messagee";
 
 export default function App() {
   const { register, errors, handleSubmit } = useForm({
-    validateCriteriaMode: 'all',
+    validateCriteriaMode: "all"
   });
   const onSubmit = data => console.log(data);
 
@@ -80,15 +80,15 @@ export default function App() {
       <input
         name="multipleErrorInput"
         ref={register({
-          required: 'This is required.',
+          required: "This is required.",
           pattern: {
             value: /d+/,
-            message: 'This input is number only.',
+            message: "This input is number only."
           },
           maxLength: {
             value: 10,
-            message: 'This input exceed maxLength.',
-          },
+            message: "This input exceed maxLength."
+          }
         })}
       />
       <ErrorMessage errors={errors} name="multipleErrorInput">
@@ -108,13 +108,13 @@ export default function App() {
 
 ## API
 
-| Prop       | Type                                                                                                                                                                                                                                                                  | Required | Default | Description                                                                                                                                                                              |
-| :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: | :-----: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`     | string                                                                                                                                                                                                                                                                |    ✓     |         | associated field name.                                                                                                                                                                   |
-| `errors`   | object                                                                                                                                                                                                                                                                |          |         | errors object from React Hook Form. It's optional if you are using `FormProvider`.                                                                                                       |
-| `message`  | string \| React.ReactElement                                                                                                                                                                                                                                          |          |         | inline error message.                                                                                                                                                                    |
-| `as`       | string \|<br>React.ReactElement \| <br>React.ComponentType                                                                                                                                                                                                            |          |         | Wrapper component or HTML tag. eg: `as="p"`, `as={<p />}` or `as={CustomComponent}`                                                                                                      |
-| `children` | (payload: {<br>&nbsp;&nbsp;message: string \| React.ReactElement;<br>&nbsp;&nbsp;messages?: Record<<br>&nbsp;&nbsp;&nbsp;&nbsp;string,<br>&nbsp;&nbsp;&nbsp;&nbsp;(string \| React.ReactElement \| boolean \| undefined)[]<br>&nbsp;&nbsp;>;<br>}) => React.ReactNode |          |         | This is a [render prop](https://reactjs.org/docs/render-props.html) for rendering error message or messages. <br>Note: you need to set validateCriteriaMode to 'all' for using messages. |
+| Prop      | Type                                                                                                                                                                                                                                                                  | Required | Default | Description                                                                                                                                                                              |
+| :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: | :-----: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`    | string                                                                                                                                                                                                                                                                |    ✓     |         | associated field name.                                                                                                                                                                   |
+| `errors`  | object                                                                                                                                                                                                                                                                |          |         | errors object from React Hook Form. It's optional if you are using `FormProvider`.                                                                                                       |
+| `message` | string \| React.ReactElement                                                                                                                                                                                                                                          |          |         | inline error message.                                                                                                                                                                    |
+| `as`      | string \|<br>React.ReactElement \| <br>React.ComponentType                                                                                                                                                                                                            |          |         | Wrapper component or HTML tag. eg: `as="p"`, `as={<p />}` or `as={CustomComponent}`                                                                                                      |
+| `render`  | (payload: {<br>&nbsp;&nbsp;message: string \| React.ReactElement;<br>&nbsp;&nbsp;messages?: Record<<br>&nbsp;&nbsp;&nbsp;&nbsp;string,<br>&nbsp;&nbsp;&nbsp;&nbsp;(string \| React.ReactElement \| boolean \| undefined)[]<br>&nbsp;&nbsp;>;<br>}) => React.ReactNode |          |         | This is a [render prop](https://reactjs.org/docs/render-props.html) for rendering error message or messages. <br>Note: you need to set validateCriteriaMode to 'all' for using messages. |
 
 ## Backers
 
