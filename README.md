@@ -10,10 +10,10 @@
 
 <div align="center">
 
-[![npm downloads](https://img.shields.io/npm/dm/react-hook-form-error.svg?style=flat-square)](https://www.npmjs.com/package/react-hook-form-error)
-[![npm](https://img.shields.io/npm/dt/react-hook-form-error.svg?style=flat-square)](https://www.npmjs.com/package/react-hook-form-error)
-[![npm](https://badgen.net/bundlephobia/minzip/react-hook-form-error)](https://badgen.net/bundlephobia/minzip/react-hook-form-error)
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=React+hooks+for+form+validation+without+the+hassle&url=https://github.com/rect-hook-form/react-hook-form-error)
+[![npm downloads](https://img.shields.io/npm/dm/error-message.svg?style=flat-square)](https://www.npmjs.com/package/error-message)
+[![npm](https://img.shields.io/npm/dt/error-message.svg?style=flat-square)](https://www.npmjs.com/package/error-message)
+[![npm](https://badgen.net/bundlephobia/minzip/error-message)](https://badgen.net/bundlephobia/minzip/error-message)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=React+hooks+for+form+validation+without+the+hassle&url=https://github.com/rect-hook-form/error-message)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/react-hook-form)
 
 </div>
@@ -21,19 +21,19 @@
 ## Install
 
 ```
-$ npm install react-hook-form-error
+$ npm install @hookform/error-message
 ```
 
 ## Quickstart
 
 ### Single Error Message
 
-[![Edit React Hook Form - ErrorMessage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-hook-form-errormessage-pc2b6?fontsize=14&hidenavigation=1&theme=dark)
+[![Edit React Hook Form - ErrorMessage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/error-messagemessage-pc2b6?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { ErrorMessage } from 'react-hook-form-error';
+import { ErrorMessage } from 'hookform@error-message';
 
 export default function App() {
   const { register, errors, handleSubmit } = useForm();
@@ -62,12 +62,12 @@ export default function App() {
 
 ### Multiple Error Messages
 
-[![Edit React Hook Form - ErrorMessage: multiple error messages](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-hook-form-errormessage-multiple-error-messages-cis2m?fontsize=14&hidenavigation=1&theme=dark)
+[![Edit React Hook Form - ErrorMessage: multiple error messages](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/error-messagemessage-multiple-error-messages-cis2m?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { ErrorMessage } from 'react-hook-form-error';
+import { ErrorMessage } from '@hookform/error-messagee';
 
 export default function App() {
   const { register, errors, handleSubmit } = useForm({
