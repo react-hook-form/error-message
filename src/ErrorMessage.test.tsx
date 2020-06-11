@@ -2,9 +2,7 @@ import * as React from 'react';
 import { render } from '@testing-library/react';
 import { ErrorMessage } from './ErrorMessage';
 
-jest.spyOn(console, 'warn').mockImplementation(() => ({}));
-
-describe('React Hook Form Error Message', () => {
+describe('ErrorMessage', () => {
   it('should render correctly', () => {
     const { asFragment } = render(<ErrorMessage name="test" errors={{}} />);
 
@@ -47,36 +45,34 @@ describe('React Hook Form Error Message', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render correctly with flat errors and as with component and children', () => {
+  it('should render correctly with flat errors and as with component and render', () => {
     const { asFragment } = render(
       <ErrorMessage
         as={<span />}
         errors={{ flat: { type: 'flat', message: 'flat' } }}
         name="flat"
-      >
-        {({ message }) => message}
-      </ErrorMessage>,
+        render={({ message }) => message}
+      />,
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render correctly with flat errors and as with component and className and children', () => {
+  it('should render correctly with flat errors and as with component and className and render', () => {
     const { asFragment } = render(
       <ErrorMessage
         as={<span />}
         errors={{ flat: { type: 'flat', message: 'flat' } }}
         name="flat"
         className="test"
-      >
-        {({ message }) => message}
-      </ErrorMessage>,
+        render={({ message }) => message}
+      />,
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render correctly with flat multiple errors and children', () => {
+  it('should render correctly with flat multiple errors and render', () => {
     const { asFragment } = render(
       <ErrorMessage
         errors={{
@@ -91,20 +87,19 @@ describe('React Hook Form Error Message', () => {
           },
         }}
         name="flat"
-      >
-        {({ messages }) =>
+        render={({ messages }) =>
           messages &&
           Object.entries(messages).map(([type, message]) => (
             <span key={type}>{message}</span>
           ))
         }
-      </ErrorMessage>,
+      />,
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render correctly with flat multiple errors and as with component and children', () => {
+  it('should render correctly with flat multiple errors and as with component and render', () => {
     const { asFragment } = render(
       <ErrorMessage
         as={<div />}
@@ -120,14 +115,13 @@ describe('React Hook Form Error Message', () => {
           },
         }}
         name="flat"
-      >
-        {({ messages }) =>
+        render={({ messages }) =>
           messages &&
           Object.entries(messages).map(([type, message]) => (
             <span key={type}>{message}</span>
           ))
         }
-      </ErrorMessage>,
+      />,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -164,7 +158,7 @@ describe('React Hook Form Error Message', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render correctly with nested errors and as with componet and children', () => {
+  it('should render correctly with nested errors and as with componet and render', () => {
     const { asFragment } = render(
       <ErrorMessage
         as={<span />}
@@ -174,15 +168,14 @@ describe('React Hook Form Error Message', () => {
           },
         }}
         name="nested.object"
-      >
-        {({ message }) => message}
-      </ErrorMessage>,
+        render={({ message }) => message}
+      />,
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render correctly with nested multiple errors and children', () => {
+  it('should render correctly with nested multiple errors and render', () => {
     const { asFragment } = render(
       <ErrorMessage
         errors={{
@@ -199,20 +192,19 @@ describe('React Hook Form Error Message', () => {
           },
         }}
         name="nested.object"
-      >
-        {({ messages }) =>
+        render={({ messages }) =>
           messages &&
           Object.entries(messages).map(([type, message]) => (
             <span key={type}>{message}</span>
           ))
         }
-      </ErrorMessage>,
+      />,
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render correctly with nested multiple errors and as with component and children', () => {
+  it('should render correctly with nested multiple errors and as with component and render', () => {
     const { asFragment } = render(
       <ErrorMessage
         as={<div />}
@@ -230,14 +222,13 @@ describe('React Hook Form Error Message', () => {
           },
         }}
         name="nested.object"
-      >
-        {({ messages }) =>
+        render={({ messages }) =>
           messages &&
           Object.entries(messages).map(([type, message]) => (
             <span key={type}>{message}</span>
           ))
         }
-      </ErrorMessage>,
+      />,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -278,7 +269,7 @@ describe('React Hook Form Error Message', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render correctly with nested errors array and as with component and children', () => {
+  it('should render correctly with nested errors array and as with component and render', () => {
     const { asFragment } = render(
       <ErrorMessage
         as={<span />}
@@ -290,15 +281,14 @@ describe('React Hook Form Error Message', () => {
           ],
         }}
         name="nested[0].array"
-      >
-        {({ message }) => message}
-      </ErrorMessage>,
+        render={({ message }) => message}
+      />,
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render correctly with nested multiple errors array and children', () => {
+  it('should render correctly with nested multiple errors array and render', () => {
     const { asFragment } = render(
       <ErrorMessage
         errors={{
@@ -317,20 +307,19 @@ describe('React Hook Form Error Message', () => {
           ],
         }}
         name="nested[0].array"
-      >
-        {({ messages }) =>
+        render={({ messages }) =>
           messages &&
           Object.entries(messages).map(([type, message]) => (
             <span key={type}>{message}</span>
           ))
         }
-      </ErrorMessage>,
+      />,
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render correctly with nested multiple errors array and as with component and children', () => {
+  it('should render correctly with nested multiple errors array and as with component and render', () => {
     const { asFragment } = render(
       <ErrorMessage
         as={<div />}
@@ -350,14 +339,13 @@ describe('React Hook Form Error Message', () => {
           ],
         }}
         name="nested[0].array"
-      >
-        {({ messages }) =>
+        render={({ messages }) =>
           messages &&
           Object.entries(messages).map(([type, message]) => (
             <span key={type}>{message}</span>
           ))
         }
-      </ErrorMessage>,
+      />,
     );
 
     expect(asFragment()).toMatchSnapshot();
