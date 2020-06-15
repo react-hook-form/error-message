@@ -10,13 +10,17 @@
 
 <div align="center">
 
-[![npm downloads](https://img.shields.io/npm/dm/error-message.svg?style=flat-square)](https://www.npmjs.com/package/error-message)
-[![npm](https://img.shields.io/npm/dt/error-message.svg?style=flat-square)](https://www.npmjs.com/package/error-message)
-[![npm](https://badgen.net/bundlephobia/minzip/error-message)](https://badgen.net/bundlephobia/minzip/error-message)
+[![npm downloads](https://img.shields.io/npm/dm/error-message.svg?style=for-the-badge)](https://www.npmjs.com/package/@hookform/error-message)
+[![npm](https://img.shields.io/npm/dt/@hookform/error-message.svg?style=for-the-badge)](https://www.npmjs.com/package/@hookform/error-message)
+[![npm](https://badgen.net/bundlephobia/minzip/@hookform/error-message?style=for-the-badge)](https://bundlephobia.com/result?p=@hookform/error-message)
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=React+hooks+for+form+validation+without+the+hassle&url=https://github.com/rect-hook-form/error-message)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/react-hook-form)
 
 </div>
+
+## Goal
+
+A simple component to render associated input's error message.
 
 ## Install
 
@@ -37,7 +41,7 @@ import { ErrorMessage } from "hookform@error-message";
 
 export default function App() {
   const { register, errors, handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = (data) => console.log(data);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -73,9 +77,9 @@ import { ErrorMessage } from "@hookform/error-messagee";
 
 export default function App() {
   const { register, errors, handleSubmit } = useForm({
-    validateCriteriaMode: "all"
+    validateCriteriaMode: "all",
   });
-  const onSubmit = data => console.log(data);
+  const onSubmit = (data) => console.log(data);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -85,12 +89,12 @@ export default function App() {
           required: "This is required.",
           pattern: {
             value: /d+/,
-            message: "This input is number only."
+            message: "This input is number only.",
           },
           maxLength: {
             value: 10,
-            message: "This input exceed maxLength."
-          }
+            message: "This input exceed maxLength.",
+          },
         })}
       />
       <ErrorMessage
