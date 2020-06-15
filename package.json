@@ -64,7 +64,7 @@
     "prettier": "^2.0.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-hook-form": "^6.0.0-rc.3",
+    "react-hook-form": "^6.0.0-rc.4",
     "react-test-renderer": "^16.9.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.15.0",

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { render } from '@testing-library/react';
 import { ErrorMessage } from './ErrorMessage';
 
@@ -23,7 +23,7 @@ describe('ErrorMessage', () => {
   it('should render correctly with flat errors and as with string', () => {
     const { asFragment } = render(
       <ErrorMessage
-        as={'span' as 'span'}
+        as={'span' as const}
         errors={{ flat: { type: 'flat', message: 'flat' } }}
         name="flat"
       />,
@@ -35,7 +35,7 @@ describe('ErrorMessage', () => {
   it('should render correctly with flat errors and as with string and className', () => {
     const { asFragment } = render(
       <ErrorMessage
-        as={'span' as 'span'}
+        as={'span' as const}
         errors={{ flat: { type: 'flat', message: 'flat' } }}
         name="flat"
         className="test"
@@ -145,7 +145,7 @@ describe('ErrorMessage', () => {
   it('should render correctly with nested errors object and as with string', () => {
     const { asFragment } = render(
       <ErrorMessage
-        as={'span' as 'span'}
+        as={'span' as const}
         errors={{
           nested: {
             object: { type: 'object', message: 'object' },
@@ -254,7 +254,7 @@ describe('ErrorMessage', () => {
   it('should render correctly with nested errors array and as with string', () => {
     const { asFragment } = render(
       <ErrorMessage
-        as={'span' as 'span'}
+        as={'span' as const}
         errors={{
           nested: [
             {
@@ -369,29 +369,6 @@ describe('ErrorMessage', () => {
         errors={{ test: { type: 'test' } }}
         name="test"
         message="test"
-      />,
-    );
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it('should render correctly with message that is ReactElement', () => {
-    const { asFragment } = render(
-      <ErrorMessage
-        errors={{ test: { type: 'test' } }}
-        name="test"
-        message={<p>test</p>}
-      />,
-    );
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it('should render correctly with errors message that is ReactElement', () => {
-    const { asFragment } = render(
-      <ErrorMessage
-        errors={{ test: { type: 'test', message: <p>test</p> } }}
-        name="test"
       />,
     );
 

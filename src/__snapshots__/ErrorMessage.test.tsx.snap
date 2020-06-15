@@ -2,14 +2,6 @@
 
 exports[`ErrorMessage should render correctly 1`] = `<DocumentFragment />`;
 
-exports[`ErrorMessage should render correctly with errors message that is ReactElement 1`] = `
-<DocumentFragment>
-  <p>
-    test
-  </p>
-</DocumentFragment>
-`;
-
 exports[`ErrorMessage should render correctly with flat errors 1`] = `
 <DocumentFragment>
   flat
@@ -71,14 +63,6 @@ exports[`ErrorMessage should render correctly with flat multiple errors and rend
   <span>
     flat3
   </span>
-</DocumentFragment>
-`;
-
-exports[`ErrorMessage should render correctly with message that is ReactElement 1`] = `
-<DocumentFragment>
-  <p>
-    test
-  </p>
 </DocumentFragment>
 `;
 

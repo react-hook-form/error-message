@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { useFormContext, get, FieldErrors } from 'react-hook-form';
-import { ErrorMessageProps } from './types';
+import React from 'react';
+import { useFormContext, get } from 'react-hook-form';
+import { ErrorMessageProps, FieldErrors } from './types';
 
 const ErrorMessage = <
   TFieldErrors extends FieldErrors,
