@@ -23,19 +23,9 @@ module.exports = {
         trailingComma: 'all',
       },
     ],
-    curly: 'error',
-    '@typescript-eslint/indent': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-object-literal-type-assertion': 'off',
-    '@typescript-eslint/generic-type-naming': [
-      'error',
-      '(^[A-Z]\\d?$|^T[A-Z][a-zA-Z]+$)',
-    ],
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
-    '@typescript-eslint/ban-ts-ignore': 'warn',
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
   settings: {
     react: {
