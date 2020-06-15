@@ -97,7 +97,7 @@ type AsProps<TAs> = TAs extends undefined
   ? JSX.IntrinsicElements[TAs]
   : never;
 
-export type ErrorMessageProps<
+export type Props<
   TFieldErrors extends FieldErrors,
   TAs extends
     | undefined
