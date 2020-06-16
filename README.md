@@ -13,8 +13,6 @@
 [![npm downloads](https://img.shields.io/npm/dm/error-message.svg?style=for-the-badge)](https://www.npmjs.com/package/@hookform/error-message)
 [![npm](https://img.shields.io/npm/dt/@hookform/error-message.svg?style=for-the-badge)](https://www.npmjs.com/package/@hookform/error-message)
 [![npm](https://badgen.net/bundlephobia/minzip/@hookform/error-message?style=for-the-badge)](https://bundlephobia.com/result?p=@hookform/error-message)
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=React+hooks+for+form+validation+without+the+hassle&url=https://github.com/rect-hook-form/error-message)
-[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/react-hook-form)
 
 </div>
 
@@ -35,9 +33,9 @@ $ npm install @hookform/error-message
 [![Edit React Hook Form - ErrorMessage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/error-messagemessage-pc2b6?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
-import React from "react";
-import { useForm } from "react-hook-form";
-import { ErrorMessage } from "hookform@error-message";
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { ErrorMessage } from 'hookform@error-message';
 
 export default function App() {
   const { register, errors, handleSubmit } = useForm();
@@ -47,7 +45,7 @@ export default function App() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <input
         name="singleErrorInput"
-        ref={register({ required: "This is required." })}
+        ref={register({ required: 'This is required.' })}
       />
       <ErrorMessage errors={errors} name="singleErrorInput" />
 
@@ -71,13 +69,13 @@ export default function App() {
 [![Edit React Hook Form - ErrorMessage: multiple error messages](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/error-messagemessage-multiple-error-messages-cis2m?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
-import React from "react";
-import { useForm } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-messagee";
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { ErrorMessage } from '@hookform/error-messagee';
 
 export default function App() {
   const { register, errors, handleSubmit } = useForm({
-    validateCriteriaMode: "all",
+    validateCriteriaMode: 'all',
   });
   const onSubmit = (data) => console.log(data);
 
@@ -86,14 +84,14 @@ export default function App() {
       <input
         name="multipleErrorInput"
         ref={register({
-          required: "This is required.",
+          required: 'This is required.',
           pattern: {
             value: /d+/,
-            message: "This input is number only.",
+            message: 'This input is number only.',
           },
           maxLength: {
             value: 10,
-            message: "This input exceed maxLength.",
+            message: 'This input exceed maxLength.',
           },
         })}
       />
