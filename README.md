@@ -12,7 +12,7 @@
 
 [![npm downloads](https://img.shields.io/npm/dm/error-message.svg?style=for-the-badge)](https://www.npmjs.com/package/@hookform/error-message)
 [![npm](https://img.shields.io/npm/dt/@hookform/error-message.svg?style=for-the-badge)](https://www.npmjs.com/package/@hookform/error-message)
-[![npm](https://badgen.net/bundlephobia/minzip/@hookform/error-message?style=for-the-badge)](https://bundlephobia.com/result?p=@hookform/error-message)
+[![npm](https://img.shields.io/bundlephobia/minzip/@hookform/error-message?style=for-the-badge)](https://bundlephobia.com/result?p=@hookform/error-message)
 
 </div>
 
