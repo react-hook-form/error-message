@@ -69,7 +69,7 @@ export default function App() {
 ```jsx
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { ErrorMessage } from '@hookform/error-messagee';
+import { ErrorMessage } from '@hookform/error-message';
 
 export default function App() {
   const { register, errors, handleSubmit } = useForm({
