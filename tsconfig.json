@@ -1,22 +1,20 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "module": "es2015",
-    "target": "es2017",
-    "moduleResolution": "node",
-    "outDir": "./dist",
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
     "jsx": "react",
-    "skipLibCheck": true,
     "declaration": true,
-    "noEmit": true,
-    "allowSyntheticDefaultImports": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "outDir": "dist",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "app", "examples", "cypress"]
+  "exclude": ["src/**/*.test.js", "src/**/*.test.ts", "src/**/*.test.tsx"]
 }
