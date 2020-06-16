@@ -28,7 +28,7 @@ $ npm install @hookform/error-message
 
 ## Quickstart
 
-#### Single Error Message
+Single Error Message
 
 ```jsx
 import React from 'react';
@@ -62,7 +62,7 @@ export default function App() {
 }
 ```
 
-#### Multiple Error Messages
+Multiple Error Messages
 
 ```jsx
 import React from 'react';
