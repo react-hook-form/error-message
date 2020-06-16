@@ -48,7 +48,7 @@
   "bugs": {
     "url": "https://github.com/react-hook-form/error-message/issues"
   },
-  "homepage": "https://github.com/react-hook-form/error-message#readme",
+  "homepage": "https://react-hook-form.com/",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-json": "^4.1.0",
