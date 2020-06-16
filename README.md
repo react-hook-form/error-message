@@ -30,8 +30,6 @@ $ npm install @hookform/error-message
 
 ### Single Error Message
 
-[![Edit React Hook Form - ErrorMessage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/error-messagemessage-pc2b6?fontsize=14&hidenavigation=1&theme=dark)
-
 ```jsx
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -65,8 +63,6 @@ export default function App() {
 ```
 
 ### Multiple Error Messages
-
-[![Edit React Hook Form - ErrorMessage: multiple error messages](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/error-messagemessage-multiple-error-messages-cis2m?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
 import React from 'react';
