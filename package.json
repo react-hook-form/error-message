@@ -17,14 +17,16 @@
     "access": "public"
   },
   "scripts": {
-    "build": "npm run clean && rollup -c",
     "clean": "rimraf dist",
+    "build": "npm run clean && rollup -c",
     "lint": "eslint '**/*.{js,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
     "lint:types": "tsc --noEmit",
-    "test": "jest",
+    "test": "jest --runInBand",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "postversion": "git push && git push origin v$npm_package_version",
+    "prepublishOnly": "npm run lint && npm run lint:types && npm test && npm run build"
   },
   "keywords": [
     "react",
