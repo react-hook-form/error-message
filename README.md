@@ -28,7 +28,7 @@ $ npm install @hookform/error-message
 
 ## Quickstart
 
-### Single Error Message
+- Single Error Message
 
 ```jsx
 import React from 'react';
@@ -62,7 +62,9 @@ export default function App() {
 }
 ```
 
-### Multiple Error Messages
+---
+
+- Multiple Error Messages
 
 ```jsx
 import React from 'react';
@@ -110,13 +112,13 @@ export default function App() {
 
 ## API
 
-| Prop      | Type                                                                                                                                                                                                                                                                  | Required | Description                                                                                                                                                                        |
-| :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`    | string                                                                                                                                                                                                                                                                |    ✓     | associated field name.                                                                                                                                                             |
-| `errors`  | object                                                                                                                                                                                                                                                                |          | errors object from React Hook Form. It's optional if you are using `FormProvider`.                                                                                                 |
-| `message` | string \| React.ReactElement                                                                                                                                                                                                                                          |          | inline error message.                                                                                                                                                              |
-| `as`      | string \|<br>React.ReactElement \| <br>React.ComponentType                                                                                                                                                                                                            |          | Wrapper component or HTML tag. eg: `as="p"`, `as={<p />}` or `as={CustomComponent}`                                                                                                |
-| `render`  | (payload: {<br>&nbsp;&nbsp;message: string \| React.ReactElement;<br>&nbsp;&nbsp;messages?: Record<<br>&nbsp;&nbsp;&nbsp;&nbsp;string,<br>&nbsp;&nbsp;&nbsp;&nbsp;(string \| React.ReactElement \| boolean \| undefined)[]<br>&nbsp;&nbsp;>;<br>}) => React.ReactNode |          | This is a [render prop](https://reactjs.org/docs/render-props.html) for rendering error message or messages. <br>Note: you need to set `criteriaMode` to `all` for using messages. |
+| Prop      | Type                                                  | Required | Description                                                                                                                                                                               |
+| :-------- | :---------------------------------------------------- | :------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`    | `string`                                              |    ✓     | Associated field name.                                                                                                                                                                    |
+| `errors`  | `object`                                              |          | `errors` object from React Hook Form. It's optional if you are using `FormProvider`.                                                                                                      |
+| `message` | `string \| React.ReactElement`                        |          | inline error message.                                                                                                                                                                     |
+| `as`      | `string \| React.ReactElement \| React.ComponentType` |          | Wrapper component or HTML tag. eg: `as="p"`, `as={<p />}` or `as={CustomComponent}`                                                                                                       |
+| `render`  | `Function`                                            |          | This is a [render prop](https://reactjs.org/docs/render-props.html) for rendering error message or messages. <br><b>Note:</b> you need to set `criteriaMode` to `all` for using messages. |
 
 ## Backers
 
