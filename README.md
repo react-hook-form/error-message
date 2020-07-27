@@ -117,7 +117,7 @@ export default function App() {
 | `name`    | `string`                                              |    ✓     | Associated field name.                                                                                                                                                                    |
 | `errors`  | `object`                                              |          | `errors` object from React Hook Form. It's optional if you are using `FormProvider`.                                                                                                      |
 | `message` | `string \| React.ReactElement`                        |          | inline error message.                                                                                                                                                                     |
-| `as`      | `string \| React.ReactElement \| React.ComponentType` |          | Wrapper component or HTML tag. eg: `as="p"`, `as={<p />}` or `as={CustomComponent}`                                                                                                       |
+| `as`      | `string \| React.ReactElement \| React.ComponentType` |          | Wrapper component or HTML tag. eg: `as="p"`, `as={<p />}` or `as={CustomComponent}`. This prop is incompatible with prop `render` and will take precedence over it.                    |
 | `render`  | `Function`                                            |          | This is a [render prop](https://reactjs.org/docs/render-props.html) for rendering error message or messages. <br><b>Note:</b> you need to set `criteriaMode` to `all` for using messages. |
 
 ## Backers
