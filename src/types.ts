@@ -67,7 +67,7 @@ export type FieldElement<TFieldValues extends FieldValues = FieldValues> =
 
 export type Message = string;
 
-export type ValidateResult = Message | boolean | undefined;
+export type ValidateResult = Message | Message[] | boolean | undefined;
 
 export type MultipleFieldErrors = Record<string, ValidateResult>;
 
