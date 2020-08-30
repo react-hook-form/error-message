@@ -74,7 +74,7 @@
     "prettier": "^2.0.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-hook-form": "^6.0.0-rc.4",
+    "react-hook-form": "^6.7.0",
     "react-test-renderer": "^16.9.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.15.0",
@@ -88,7 +88,7 @@
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "react-hook-form": ">=6.0.0"
+    "react-hook-form": ">=6.6.0"
   },
   "husky": {
     "hooks": {
