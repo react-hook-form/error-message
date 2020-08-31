@@ -8,7 +8,7 @@
   "unpkg": "dist/index.umd.production.min.js",
   "jsdelivr": "dist/index.umd.production.min.js",
   "jsnext:main": "dist/index.esm.js",
-  "source": "src/index.tsx",
+  "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
