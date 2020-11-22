@@ -18,6 +18,20 @@
   "publishConfig": {
     "access": "public"
   },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "limit": "264 B"
+    },
+    {
+      "path": "dist/index.esm.js",
+      "limit": "288 B"
+    },
+    {
+      "path": "dist/index.umd.js",
+      "limit": "270 B"
+    }
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
