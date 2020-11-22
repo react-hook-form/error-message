@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { useFormContext, get, FieldErrors } from 'react-hook-form';
 import { Props } from './types';
 
@@ -25,25 +25,18 @@ const ErrorMessage = <
   }
 
   const { message: messageFromRegister, types } = error;
-  const props = {
-    ...rest,
+  const props = Object.assign({}, rest, {
     children: messageFromRegister || message,
-  };
+  });
 
-  return as ? (
-    React.isValidElement(as) ? (
-      React.cloneElement(as, props)
-    ) : (
-      React.createElement(as as string, props)
-    )
-  ) : render ? (
-    (render({
-      message: messageFromRegister || message,
-      messages: types,
-    }) as React.ReactElement)
-  ) : (
-    <React.Fragment {...props} />
-  );
+  return React.isValidElement(as)
+    ? React.cloneElement(as, props)
+    : render
+    ? (render({
+        message: messageFromRegister || message,
+        messages: types,
+      }) as React.ReactElement)
+    : React.createElement((as as string) || React.Fragment, props);
 };
 
 export { ErrorMessage };
