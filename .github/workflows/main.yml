@@ -1,5 +1,14 @@
 name: CI
-on: [push]
+on: 
+  push:
+    branches: 
+      - master
+      - feature/*
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches:
+      - master
+      - feature/*
 jobs:
   build:
     runs-on: ubuntu-latest
