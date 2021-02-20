@@ -25,8 +25,6 @@ A simple component to render associated input's error message.
 ```
 $ npm install @hookform/error-message
 ```
-## Code Quality
-We will be integrating SonarCloud to our PR for code quality checking.
 
 ## Quickstart
 
