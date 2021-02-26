@@ -22,6 +22,33 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Lint
+        run: |
+          npm run lint:types
+          npm run lint
+      - name: Test
+        run: npm test
+        env:
+          CI: true
+      - name: Build
+        run: npm run build
+
+  coverage:
+    runs-on: ubuntu-latest
+    if: >
+      ${{ github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' }}
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
@@ -35,16 +62,3 @@ jobs:
             -Dsonar.pullrequest.key=${{ github.event.pull_request.number }}
             -Dsonar.pullrequest.branch=${{ github.event.pull_request.head.ref }}
             -Dsonar.pullrequest.base=${{ github.event.pull_request.base.ref }}
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Lint
-        run: |
-          npm run lint:types
-          npm run lint
-      - name: Test
-        run: npm test
-        env:
-          CI: true
-      - name: Build
-        run: npm run build
