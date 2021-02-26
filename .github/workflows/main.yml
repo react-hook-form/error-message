@@ -1,12 +1,5 @@
 name: CI
-on:
-  push:
-    branches:
-      - master
-  pull_request_target:
-    branches:
-      - master
-    types: [opened]
+on: [push, pull_request_target]
       
 jobs:
   build:
