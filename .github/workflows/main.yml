@@ -1,14 +1,10 @@
 name: CI
-on: 
+on:
   push:
-    branches: 
-      - master
-      - feature/*
+    branches: [master, ]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches:
-      - master
-      - feature/*
+    branches: [master]
       
 jobs:
   build:
@@ -22,6 +18,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
+      # If this run was triggered by a pull request event, then checkout
+      # the head of the pull request instead of the merge commit.
+      - run: git checkout HEAD^2
+        if: ${{ github.event_name == 'pull_request' }}
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Lint
@@ -35,13 +37,6 @@ jobs:
       - name: Build
         run: npm run build
 
-  coverage:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
-    strategy:
-      matrix:
-        node-version: [12.x]
-    steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
