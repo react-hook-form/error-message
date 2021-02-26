@@ -1,5 +1,5 @@
 name: CI
-on: [push, pull_request_target]
+on: [push]
       
 jobs:
   build:
@@ -27,9 +27,21 @@ jobs:
       - name: Build
         run: npm run build
 
+  coverage:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
-        if: github.event_name == 'pull_request_target' && github.event.action == 'opened'
+        if: github.event_name == 'push' && github.event.action == 'closed' && github.event.pull_request.merged == true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
