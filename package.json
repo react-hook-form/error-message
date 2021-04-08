@@ -66,13 +66,10 @@
   },
   "homepage": "https://react-hook-form.com",
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^4.9.0",
     "@testing-library/react": "^11.2.2",
-    "@testing-library/react-hooks": "^3.4.2",
     "@types/jest": "^26.0.15",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "@types/react-test-renderer": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
     "eslint": "^7.14.0",
@@ -88,9 +85,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.11.4",
-    "react-test-renderer": "^17.0.1",
     "rimraf": "^3.0.2",
-    "size-limit": "^4.9.0",
     "ts-jest": "^26.4.4",
     "typescript": "^4.1.2"
   },

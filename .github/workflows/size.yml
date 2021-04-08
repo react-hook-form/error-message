@@ -1,12 +1,13 @@
-name: size
+name: Compressed Size
+
 on: [pull_request]
+
 jobs:
-  size:
+  build:
     runs-on: ubuntu-latest
-    env:
-      CI_JOB_NUMBER: 1
+
     steps:
-      - uses: actions/checkout@v1
-      - uses: andresz1/size-limit-action@v1
+      - uses: actions/checkout@v2
+      - uses: preactjs/compressed-size-action@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
