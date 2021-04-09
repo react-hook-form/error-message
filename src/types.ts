@@ -1,11 +1,12 @@
 import React from 'react';
 import {
-  Assign,
   FieldName,
   Message,
   MultipleFieldErrors,
   FieldErrors,
 } from 'react-hook-form';
+
+type Assign<T extends object, U extends object> = T & Omit<U, keyof T>;
 
 export type FieldValuesFromFieldErrors<
   TFieldErrors
