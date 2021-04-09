@@ -33,7 +33,7 @@
     }
   ],
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "rimraf dist",
     "build": "microbundle build --jsx React.createElement",
     "lint": "eslint '**/*.{js,ts}'",
     "lint:fix": "npm run lint -- --fix",
