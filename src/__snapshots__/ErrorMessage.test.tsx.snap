@@ -8,7 +8,21 @@ exports[`ErrorMessage should render correctly with flat errors 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ErrorMessage should render correctly with flat errors and as with component and className and render 1`] = `
+exports[`ErrorMessage should render correctly with flat errors and as with component 1`] = `
+<DocumentFragment>
+  <div>
+    flat
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ErrorMessage should render correctly with flat errors and as with component and render 1`] = `
+<DocumentFragment>
+  flat
+</DocumentFragment>
+`;
+
+exports[`ErrorMessage should render correctly with flat errors and as with element and className and render 1`] = `
 <DocumentFragment>
   <span
     class="test"
@@ -18,7 +32,7 @@ exports[`ErrorMessage should render correctly with flat errors and as with compo
 </DocumentFragment>
 `;
 
-exports[`ErrorMessage should render correctly with flat errors and as with component and render 1`] = `
+exports[`ErrorMessage should render correctly with flat errors and as with element and render 1`] = `
 <DocumentFragment>
   <span>
     flat
@@ -44,7 +58,7 @@ exports[`ErrorMessage should render correctly with flat errors and as with strin
 </DocumentFragment>
 `;
 
-exports[`ErrorMessage should render correctly with flat multiple errors and as with component and render 1`] = `
+exports[`ErrorMessage should render correctly with flat multiple errors and as with element and render 1`] = `
 <DocumentFragment>
   <div>
     flat
@@ -86,7 +100,7 @@ exports[`ErrorMessage should render correctly with nested errors array 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ErrorMessage should render correctly with nested errors array and as with component and render 1`] = `
+exports[`ErrorMessage should render correctly with nested errors array and as with element and render 1`] = `
 <DocumentFragment>
   <span>
     array
@@ -116,7 +130,7 @@ exports[`ErrorMessage should render correctly with nested errors object and as w
 </DocumentFragment>
 `;
 
-exports[`ErrorMessage should render correctly with nested multiple errors and as with component and render 1`] = `
+exports[`ErrorMessage should render correctly with nested multiple errors and as with element and render 1`] = `
 <DocumentFragment>
   <div>
     object
@@ -138,7 +152,7 @@ exports[`ErrorMessage should render correctly with nested multiple errors and re
 </DocumentFragment>
 `;
 
-exports[`ErrorMessage should render correctly with nested multiple errors array and as with component and render 1`] = `
+exports[`ErrorMessage should render correctly with nested multiple errors array and as with element and render 1`] = `
 <DocumentFragment>
   <div>
     array
