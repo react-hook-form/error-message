@@ -17,7 +17,7 @@ type AsProps<TAs> = TAs extends undefined
   : TAs extends React.ReactElement
   ? Record<string, any>
   : TAs extends React.ComponentType<infer P>
-  ? P
+  ? Omit<P, 'children'>
   : TAs extends keyof JSX.IntrinsicElements
   ? JSX.IntrinsicElements[TAs]
   : never;
