@@ -36,7 +36,7 @@ import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
 
 export default function App() {
-  const { register, errors, handleSubmit } = useForm();
+  const { register, formState: { errors }, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
 
   return (
@@ -72,7 +72,7 @@ import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
 
 export default function App() {
-  const { register, errors, handleSubmit } = useForm({
+  const { register, formState: { errors }, handleSubmit } = useForm({
     criteriaMode: 'all',
   });
   const onSubmit = (data) => console.log(data);
