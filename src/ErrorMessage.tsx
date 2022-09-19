@@ -18,7 +18,7 @@ const ErrorMessage = <
   ...rest
 }: Props<TFieldErrors, TAs>) => {
   const methods = useFormContext();
-  const error = get(errors || methods.formState.errors, name);
+  const error = get(errors || methods?.formState.errors, name);
 
   if (!error) {
     return null;
