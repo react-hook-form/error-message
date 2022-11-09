@@ -1,6 +1,6 @@
 {
   "name": "@hookform/error-message",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "React Hook Form error message component",
   "source": "src/index.ts",
   "main": "dist/index.js",
