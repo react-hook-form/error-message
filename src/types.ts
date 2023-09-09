@@ -22,6 +22,9 @@ type AsProps<TAs> = TAs extends undefined
   ? JSX.IntrinsicElements[TAs]
   : never;
 
+// accept strings starting with 'root.'
+type RootField = `root.${string}`;
+
 export type Props<
   TFieldErrors extends FieldErrors,
   TAs extends
@@ -33,7 +36,7 @@ export type Props<
   {
     as?: TAs;
     errors?: TFieldErrors;
-    name: FieldName<FieldValuesFromFieldErrors<TFieldErrors>>;
+    name: FieldName<FieldValuesFromFieldErrors<TFieldErrors>> | RootField;
     message?: Message;
     render?: (data: {
       message: Message;
