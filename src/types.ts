@@ -35,7 +35,8 @@ export type Props<
     errors?: TFieldErrors;
     name:
       | FieldName<FieldValuesFromFieldErrors<TFieldErrors>>
-      | `root.${string}`;
+      | `root.${string}`
+      | 'root';
     message?: Message;
     render?: (data: {
       message: Message;
