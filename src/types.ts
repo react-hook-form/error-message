@@ -33,7 +33,10 @@ export type Props<
   {
     as?: TAs;
     errors?: TFieldErrors;
-    name: FieldName<FieldValuesFromFieldErrors<TFieldErrors>>;
+    name:
+      | FieldName<FieldValuesFromFieldErrors<TFieldErrors>>
+      | `root.${string}`
+      | 'root';
     message?: Message;
     render?: (data: {
       message: Message;
